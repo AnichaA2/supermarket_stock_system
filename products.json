@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Milk",
+        "price": 2.5,
+        "quantity": 12,
+        "category": "Dairy",
+        "min_quantity": 5
+    },
+    {
+        "name": "Bread",
+        "price": 1.5,
+        "quantity": 15,
+        "category": "Bakery",
+        "min_quantity": 5
+    },
+    {
+        "name": "Eggs",
+        "price": 3.0,
+        "quantity": 10,
+        "category": "Dairy",
+        "min_quantity": 5
+    },
+    {
+        "name": "Toilet paper",
+        "price": 5.0,
+        "quantity": 14,
+        "category": "Cleaning",
+        "min_quantity": 5
+    },
+    {
+        "name": "Chicken",
+        "price": 7.0,
+        "quantity": 20,
+        "category": "Meat",
+        "min_quantity": 5
+    },
+    {
+        "name": "Tomates",
+        "price": 4.0,
+        "quantity": 23,
+        "category": "Vegetables",
+        "min_quantity": 5
+    },
+    {
+        "name": "Passion fruit",
+        "price": 3.0,
+        "quantity": 30,
+        "category": "Fruits",
+        "min_quantity": 10
+    }
+]
