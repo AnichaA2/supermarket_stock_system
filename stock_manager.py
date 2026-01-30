@@ -1,4 +1,4 @@
-# StockManager manages products, categories, and alerts
+# StockManager controls the system logic
 
 from file_handler import FileHandler
 from category import Category
@@ -8,11 +8,12 @@ from product import Product
 
 class StockManager:
     def __init__(self):
+        #encapsulation: internal system data
         self.file_handler = FileHandler()
         self.products = self.file_handler.load_products()
         self.categories = {}
 
-        for product in self.products:
+        for product in self.products: # add loaded products into categories
             self.add_to_category(product)
 
     def add_to_category(self, product):
@@ -61,8 +62,9 @@ class StockManager:
     def restock_product(self, product_name, quantity):
         product = self.find_product_by_name(product_name)
         if product:
+            #abstraction
             transaction = RestockTransaction(product, quantity)
-            transaction.process()
+            transaction.process() #polymorphism here
             self.file_handler.save_products(self.products)
         else:
             print("Product not found.")

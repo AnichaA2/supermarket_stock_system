@@ -1,7 +1,7 @@
 # Base Transaction class (Inheritance)
 from abc import ABC, abstractmethod
 
-class Transaction(ABC):
+class Transaction(ABC): #abstraction
     def __init__(self, product, quantity):
         self.product = product
         self.quantity = quantity
