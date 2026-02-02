@@ -21,11 +21,18 @@ class Menu:
             choice = input("Choose an option: ") # gets the user input
 
             if choice == "1": # user wants to add a product
-                name = input("Product name: ")
-                price = float(input("Price: "))
-                quantity = int(input("Quantity: "))
-                category = input("Category: ")
-                min_qty = int(input("Minimum quantity: "))
+                name = input("Product name: "). strip()
+                if name == "" or name.isdigit():
+                    print("Invalid product name.")
+                    continue
+                try:
+                    price = float(input("Price: "))
+                    quantity = int(input("Quantity: "))
+                    min_qty = int(input("Minimum quantity: "))
+                except ValueError:
+                    print("Invalid number input.")
+                    continue
+                category: str = input("Category: ")
                 manager.add_product(name, price, quantity, category, min_qty) # delegates logic to stock manager
 
             elif choice == "2": #shows all products
@@ -36,12 +43,23 @@ class Menu:
 
             elif choice == "4":
                 name = input("Product name: ")
-                qty = int(input("Quantity to sell: "))
+                qty = input("Quantity to sell: ")
+                if not qty.isdigit():
+                    print("Invalid quantity.")
+                    continue
                 manager.sell_product(name, qty) #sale logic handled by stockmanager
 
             elif choice == "5":
-                name = input("Product name: ")
-                qty = int(input("Quantity to restock: "))
+                name = input("Product name: "). strip()
+
+                if name == "" or name.isdigit():
+                    print("Product name must contain letters"); continue
+
+                qty = input ("Quantity to restock: ")
+
+                if not qty.isdigit():
+                    print("Invalid quantity.")
+                    continue
                 manager.restock_product(name, qty) #restock logic handled by stockmanager
 
             elif choice == "6":
