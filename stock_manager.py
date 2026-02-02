@@ -69,19 +69,4 @@ class StockManager:
         else:
             print("Product not found.")
 
-    def delete_product(self, product_name):
-        product = self.find_product_by_name(product_name)
-
-        if product:
-            self.products.remove(product)
-
-            # Remove from category list too
-            if product.category in self.categories:
-                if product in self.categories[product.category].products:
-                    self.categories[product.category].products.remove(product)
-
-            # Save changes to JSON
-            self.file_handler.save_products(self.products)
-            print(f"Product '{product.name}' deleted successfully.")
-        else:
-            print("Product not found.")
+    
