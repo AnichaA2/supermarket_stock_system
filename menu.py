@@ -45,6 +45,7 @@ class Menu:
             elif choice == "4":
                 name = input("Product name: ").strip()
                 qty = input("Quantity to sell: ")
+                # Validate that input is a number to prevent crashes and convert string to integer
                 if not qty.isdigit():
                     print("Invalid quantity.")
                     continue
