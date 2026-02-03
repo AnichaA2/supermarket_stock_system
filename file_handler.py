@@ -2,7 +2,8 @@ import json # used to work with json files
 from product import Product # used to recreate product objects from file
 
 class FileHandler:
-    def __init__(self, filename="products.json"): #oop: encapsulation, file name belongs to this object only
+    def __init__(self): #oop: encapsulation, file name belongs to this object only
+        filename="products.json"
         self.filename = filename # store the file name
 
     def save_products(self, products): # abstraction, other classes do not know how saving works
