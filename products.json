@@ -16,15 +16,8 @@
     {
         "name": "Eggs",
         "price": 3.0,
-        "quantity": 10,
+        "quantity": 30,
         "category": "Dairy",
-        "min_quantity": 5
-    },
-    {
-        "name": "Toilet paper",
-        "price": 5.0,
-        "quantity": 14,
-        "category": "Cleaning",
         "min_quantity": 5
     },
     {
@@ -51,7 +44,7 @@
     {
         "name": "Banana",
         "price": 23.0,
-        "quantity": 22,
+        "quantity": 102,
         "category": "Fruits",
         "min_quantity": 14
     },
@@ -61,5 +54,12 @@
         "quantity": 23,
         "category": "Fruits",
         "min_quantity": 12
+    },
+    {
+        "name": "chocolate",
+        "price": 3.0,
+        "quantity": 40,
+        "category": "sweets",
+        "min_quantity": 5
     }
 ]

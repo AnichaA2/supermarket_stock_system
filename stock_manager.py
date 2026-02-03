@@ -1,4 +1,5 @@
-# StockManager controls the system logic, because all stock operations are handled inside this class
+# StockManager controls the system logic.
+# All stock operations are handled inside this class.
 
 from file_handler import FileHandler
 from category import Category
@@ -6,14 +7,16 @@ from sale_transaction import SaleTransaction
 from restock_transaction import RestockTransaction
 from product import Product
 
+
 class StockManager:
     def __init__(self):
-        #encapsulation: internal system data
+        # Encapsulation: internal system data
         self.file_handler = FileHandler()
         self.products = self.file_handler.load_products()
         self.categories = {}
 
-        for product in self.products: # add loaded products into categories
+        # Add loaded products into categories
+        for product in self.products:
             self.add_to_category(product)
 
     def add_to_category(self, product):
@@ -54,7 +57,7 @@ class StockManager:
         product = self.find_product_by_name(product_name)
         if product:
             transaction = SaleTransaction(product, quantity)
-            transaction.process()
+            transaction.process()  # Polymorphism
             self.file_handler.save_products(self.products)
         else:
             print("Product not found.")
@@ -62,14 +65,25 @@ class StockManager:
     def restock_product(self, product_name, quantity):
         product = self.find_product_by_name(product_name)
         if product:
-            #abstraction
             transaction = RestockTransaction(product, quantity)
-            transaction.process() #polymorphism here
+            transaction.process()  # Polymorphism
             self.file_handler.save_products(self.products)
         else:
             print("Product not found.")
-            def delete_product(self, product_name):
-                product = self.find_product_byname(product_name)
 
-        
-    
+    # ✅ DELETE PRODUCT METHOD (CORRECT POSITION)
+    def delete_product(self, product_name):
+        product = self.find_product_by_name(product_name)
+
+        if product:
+            self.products.remove(product)
+
+            # Remove from category list
+            if product.category in self.categories:
+                if product in self.categories[product.category].products:
+                    self.categories[product.category].products.remove(product)
+
+            self.file_handler.save_products(self.products)
+            print(f"Product '{product.name}' deleted successfully.")
+        else:
+            print("Product not found.")

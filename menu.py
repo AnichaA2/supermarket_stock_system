@@ -16,7 +16,8 @@ class Menu:
             print("3. Check low stock")
             print("4. Sell product")
             print("5. Restock product")
-            print("6. Exit")
+            print("6. Delete product")
+            print("7. Exit")
 
             choice = input("Choose an option: ")
 
@@ -42,31 +43,34 @@ class Menu:
                 manager.check_low_stock()
 
             elif choice == "4":
-                name = input("Product name: ")
+                name = input("Product name: ").strip()
                 qty = input("Quantity to sell: ")
                 if not qty.isdigit():
                     print("Invalid quantity.")
                     continue
-                qty = int(qty)
-                manager.sell_product(name, qty)
+                manager.sell_product(name, int(qty))
 
             elif choice == "5":
                 name = input("Product name: ").strip()
                 if name == "" or name.isdigit():
-                    print("Product name must contain letters")
+                    print("Product name must contain letters.")
                     continue
                 qty = input("Quantity to restock: ")
                 if not qty.isdigit():
                     print("Invalid quantity.")
                     continue
-                qty = int(qty)
-
-                manager.restock_product(name, qty)
+                manager.restock_product(name, int(qty))
 
             elif choice == "6":
-                # --- FIXED SYNTAX & INDENTATION ---
+                name = input("Enter product name to delete: ").strip()
+                if name == "":
+                    print("Name cannot be empty.")
+                    continue
+                manager.delete_product(name)
+
+            elif choice == "7":
                 print("Exiting program...")
                 break
-            
+
             else:
                 print("Invalid option. Please try again.")
