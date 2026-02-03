@@ -51,7 +51,7 @@
     {
         "name": "Kiwi",
         "price": 2.0,
-        "quantity": 3,
+        "quantity": 43,
         "category": "Fruits",
         "min_quantity": 12
     },
