@@ -1,4 +1,4 @@
-# StockManager controls the system logic
+# StockManager controls the system logic, because all stock operations are handled inside this class
 
 from file_handler import FileHandler
 from category import Category
