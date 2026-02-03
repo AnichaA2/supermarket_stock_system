@@ -42,13 +42,6 @@
         "min_quantity": 10
     },
     {
-        "name": "Banana",
-        "price": 23.0,
-        "quantity": 52,
-        "category": "Fruits",
-        "min_quantity": 14
-    },
-    {
         "name": "Kiwi",
         "price": 2.0,
         "quantity": 41,
@@ -68,5 +61,12 @@
         "quantity": 40,
         "category": "Desserts",
         "min_quantity": 10
+    },
+    {
+        "name": "salmon",
+        "price": 12.0,
+        "quantity": 23,
+        "category": "Fish",
+        "min_quantity": 3
     }
 ]
