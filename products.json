@@ -51,14 +51,14 @@
     {
         "name": "Kiwi",
         "price": 2.0,
-        "quantity": 23,
+        "quantity": 3,
         "category": "Fruits",
         "min_quantity": 12
     },
     {
         "name": "chocolate",
         "price": 3.0,
-        "quantity": 40,
+        "quantity": 38,
         "category": "sweets",
         "min_quantity": 5
     }
