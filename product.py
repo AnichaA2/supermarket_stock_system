@@ -21,7 +21,7 @@ class Product:
         return self.__quantity
 
     @property
-    def category(self):  # <--- ADICIONE ESTE AQUI
+    def category(self): 
         return self.__category
 
     # --- METHODS: The only way to MODIFY the data ---
