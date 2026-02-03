@@ -9,7 +9,7 @@
     {
         "name": "Bread",
         "price": 1.5,
-        "quantity": 15,
+        "quantity": 35,
         "category": "Bakery",
         "min_quantity": 5
     },
@@ -44,7 +44,7 @@
     {
         "name": "Banana",
         "price": 23.0,
-        "quantity": 102,
+        "quantity": 52,
         "category": "Fruits",
         "min_quantity": 14
     },
@@ -61,5 +61,12 @@
         "quantity": 38,
         "category": "sweets",
         "min_quantity": 5
+    },
+    {
+        "name": "Ice cream",
+        "price": 5.0,
+        "quantity": 40,
+        "category": "Desserts",
+        "min_quantity": 10
     }
 ]
