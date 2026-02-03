@@ -1,6 +1,6 @@
 class Product:
     def __init__(self, name, price, quantity, category, min_quantity=5):
-        # ENCAPSULATION: Double underscores (__) make these attributes PRIVATE
+        # ENCAPSULATION: I used double underscores (__) to make the attributes private
         self.__name = name
         self.__price = price
         self.__quantity = quantity
