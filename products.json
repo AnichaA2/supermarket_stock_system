@@ -2,7 +2,7 @@
     {
         "name": "Milk",
         "price": 2.5,
-        "quantity": 12,
+        "quantity": 22,
         "category": "Dairy",
         "min_quantity": 5
     },
@@ -47,5 +47,12 @@
         "quantity": 30,
         "category": "Fruits",
         "min_quantity": 10
+    },
+    {
+        "name": "Banana",
+        "price": 23.0,
+        "quantity": 2,
+        "category": "Fruits",
+        "min_quantity": 14
     }
 ]

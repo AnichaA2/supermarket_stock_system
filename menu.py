@@ -48,6 +48,7 @@ class Menu:
                 if not qty.isdigit():
                     print("Invalid quantity.")
                     continue
+                qty = int(qty)
                 manager.sell_product(name, qty)
 
             elif choice == "5":
@@ -59,6 +60,8 @@ class Menu:
                 if not qty.isdigit():
                     print("Invalid quantity.")
                     continue
+                qty = int(qty)
+                
                 manager.restock_product(name, qty)
 
             elif choice == "6":
