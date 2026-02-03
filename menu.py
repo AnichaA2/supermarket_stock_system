@@ -16,8 +16,7 @@ class Menu:
             print("3. Check low stock")
             print("4. Sell product")
             print("5. Restock product")
-            print("6. Delete product")
-            print("7. Exit")
+            print("6. Exit")
 
             choice = input("Choose an option: ")
 
@@ -61,19 +60,10 @@ class Menu:
                     print("Invalid quantity.")
                     continue
                 qty = int(qty)
-                
+
                 manager.restock_product(name, qty)
 
             elif choice == "6":
-                # --- FIXED DELETE OPTION ---
-                name = input("Enter product name to delete: ").strip()
-                if name == "":
-                    print("Name cannot be empty.")
-                    continue
-                # Assuming your StockManager has a delete_product method
-                manager.delete_product(name) 
-
-            elif choice == "7":
                 # --- FIXED SYNTAX & INDENTATION ---
                 print("Exiting program...")
                 break

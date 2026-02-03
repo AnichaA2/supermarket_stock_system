@@ -71,11 +71,5 @@ class StockManager:
             def delete_product(self, product_name):
                 product = self.find_product_byname(product_name)
 
-                if product:
-                    self.products.remove(product)
-                    self.file_handler.save_products(self.products)
-                    print("product deleted.")
-                else:
-                    print("product not found.")
-
+        
     
