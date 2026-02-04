@@ -68,5 +68,12 @@
         "quantity": 90,
         "category": "Fish",
         "min_quantity": 20
+    },
+    {
+        "name": "sock",
+        "price": 2.0,
+        "quantity": 17,
+        "category": "clothes",
+        "min_quantity": 18
     }
 ]
