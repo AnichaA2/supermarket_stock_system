@@ -35,13 +35,6 @@
         "min_quantity": 5
     },
     {
-        "name": "Passion fruit",
-        "price": 3.0,
-        "quantity": 30,
-        "category": "Fruits",
-        "min_quantity": 10
-    },
-    {
         "name": "Kiwi",
         "price": 2.0,
         "quantity": 41,
@@ -68,5 +61,12 @@
         "quantity": 23,
         "category": "Fish",
         "min_quantity": 3
+    },
+    {
+        "name": "Tuna",
+        "price": 23.0,
+        "quantity": 90,
+        "category": "Fish",
+        "min_quantity": 20
     }
 ]
